@@ -48,7 +48,7 @@ public abstract class AbstractLogstashIndexerDao implements LogstashIndexerDao, 
     payload.put("source_host", jenkinsUrl);
     payload.put("@buildTimestamp", buildData.getTimestamp());
     payload.put("@timestamp", LogstashConfiguration.getInstance().getDateFormatter().format(Calendar.getInstance().getTime()));
-    payload.put("@version", 1);
+    payload.put("@version", 7.0.0);
 
     return payload;
   }
